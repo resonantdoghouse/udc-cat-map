@@ -2,8 +2,8 @@
 
 ## File Structure
 
-`app/` contains code for the backend, php slim.
-`public/map/` contains code relevant to the map front-end and knockout.js 
+- `app/` contains code for the backend, php slim.
+- `public/map/` contains code relevant to the map front-end and knockout.js 
 
 ## running local
 
