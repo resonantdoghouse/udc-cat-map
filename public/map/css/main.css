@@ -84,6 +84,8 @@ html, body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .sidebar-options #sidebar-toggle-in {
+    -webkit-animation: fadeIn 3000ms;
+            animation: fadeIn 3000ms;
     position: absolute;
     top: .5em;
     padding-left: .5em;

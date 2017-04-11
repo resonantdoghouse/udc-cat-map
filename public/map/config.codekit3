@@ -152,14 +152,6 @@
 		"oF": 1,
 		"sC": 0,
 		"tS": 0
-		},
-	"\/locations.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/locations-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		}
 	},
 "hooks": [

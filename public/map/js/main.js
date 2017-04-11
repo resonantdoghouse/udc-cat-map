@@ -64,16 +64,18 @@ var ViewModel = function(){
 
   // click function for items in list
   self.listClick = function(clickedItem){
+	  
     self.currentLocation(clickedItem);
     //console.log(ko.toJSON(clickedItem.title));
+    
     var bounds = new google.maps.LatLngBounds();
-
     var clickedId = ko.toJSON(clickedItem.id);
     var clickedIdTrim = clickedId.replace(/['"]+/g, '');
 
     markers[clickedIdTrim].setMap(map);
     
 		markers[clickedIdTrim].setAnimation(google.maps.Animation.BOUNCE);
+		
 		setTimeout(function(){ markers[clickedIdTrim].setAnimation(null); }, 2200);
 		
     bounds.extend(markers[clickedIdTrim].position);
@@ -97,11 +99,28 @@ var ViewModel = function(){
   self.nameSearch = ko.observable('');
 
   self.filteredRecords = ko.computed(function () {
+	  
       var nameSearch = self.nameSearch().toLowerCase();
+      
       return ko.utils.arrayFilter(self.locationList(), function (r) {
-          return r.name().toLowerCase().indexOf(nameSearch) !== -1 ;
+          return r.name().toLowerCase().indexOf(nameSearch) !== -1;
       });
+      
+      
+     
   });
+  
+  // monitor change in array and update map
+  self.filteredRecords.subscribe(function (updateList) {
+	  
+	  refineMarkers(updateList);
+	  
+  	//console.log(updateList);
+	});
+  
+  	
+  
+  
 
 }
 

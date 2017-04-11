@@ -101,5 +101,32 @@ function initMap() {
       markers[i].setMap(null);
     }
   }
+  
+  
+  // search filter 
+  refineMarkers = function(data){
+	  hideAllMarkers();
+	  var bounds = new google.maps.LatLngBounds();
+	  
+	  $(data).each(function( i ) {
+		  var filterLat = data[i].lat();
+		  var filterLng = data[i].lng();
+		  		  
+		  markers[i].setMap(map);
+      bounds.extend(markers[i].position);
 
+		});
+		
+	  map.fitBounds(bounds);
+	   
+  }
+  
+  
 }
+
+
+
+
+
+
+
