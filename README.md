@@ -10,6 +10,7 @@
 - For review the code in `public/map/` is where the knockout.js is used e.g. `public/map/js/main.js`
 	- The `app` folder contains routing and database settings for the backend, used to create JSON output for the map front-end. If you want to setup the backend edit `app/db.php` and update the database settings to match your own.
 	- I’ve added the table SQL at the bottom, you can run this in phpmyadmin or any mysql interface used with your database.
+	- If you don’t want to bother with the php app and database, you can modify the code in `app/public/map/js/main.js`, change the connection which is: `$.getJSON('//catmap.catkittycat.com/api/cats'` to reference the locations.json file instead.
 
 ## running local
 
