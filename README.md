@@ -1,5 +1,8 @@
 # UDC Cat Map
 
+## Live Demo
+[Map Page][1]
+[Add Cat Page][2]
 ## File Structure
 
 - `app/` contains code for the backend, php slim.
@@ -25,3 +28,6 @@
 
   
 
+
+[1]:	http://catmap.catkittycat.com/public/map/
+[2]:	http://catmap.catkittycat.com/addcat.html
