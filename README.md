@@ -1,6 +1,11 @@
 # UDC Cat Map
 
-## Udacity map project
+## File Structure
+
+`app/` contains code for the backend, php slim.
+`public/map/` contains code relevant to the map front-end and knockout.js 
+
+## running local
 
 - To run locally install composer dependencies with composer.json
 - You will also need a database in order to connect
@@ -16,6 +21,7 @@
 	  lng float(10,6) NOT NULL,
 	  PRIMARY KEY (id)
 	) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
 
   
 
